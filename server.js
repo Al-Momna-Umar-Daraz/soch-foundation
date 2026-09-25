@@ -2,7 +2,8 @@ const http = require('http');
 const fs = require('fs');
 const path = require('path');
 
-const root = path.join(__dirname, 'public');
+// GitHub web upload keeps the site assets at repository root.
+const root = __dirname;
 const submissions = [];
 const sessions = new Map();
 const crypto = require('crypto');
